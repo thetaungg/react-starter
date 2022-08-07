@@ -9,6 +9,7 @@ export const overlay = css`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
 `;
 
 export const spinnerContainer = css`

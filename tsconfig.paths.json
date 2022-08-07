@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
+      "@/App/*": ["App/*"],
       "@/components/*": ["components/*"],
-      "@/containers/*": ["containers/*"],
+      "@/pages/*": ["pages/*"],
       "@/hooks/*": ["hooks/*"],
       "@/interfaces/*": ["interfaces/*"],
       "@/redux/*": ["redux/*"],

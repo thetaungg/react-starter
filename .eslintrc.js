@@ -6,6 +6,7 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:prettier/recommended'
     ],
+    plugins: ['eslint-plugin-prettier', 'simple-import-sort'],
     rules: {
         'prettier/prettier': 'error',
         'no-console': [1, { allow: ['info', 'error'] }],
@@ -27,7 +28,20 @@ module.exports = {
                     'render'
                 ]
             }
-        ]
-    },
-    plugins: ['eslint-plugin-prettier']
+        ],
+        'import/prefer-default-export': 'off',
+        'import/extensions': [
+            'error',
+            'ignorePackages',
+            {
+                js: 'never',
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never',
+                '': 'never' // this is for solving the error that sometime appears even though we set rules for all extensions we use up above
+            }
+        ],
+        'import/no-unresolved': 'off',
+        'simple-import-sort/imports': 'error'
+    }
 };
